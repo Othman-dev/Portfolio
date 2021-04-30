@@ -1,0 +1,274 @@
+@import './_default.scss';
+
+
+//-----     RIGHT SIDE     -----//
+
+.circleRight{
+		position: absolute;
+		z-index: 3;
+		height: 26rem;
+		width: 26rem;
+		border-radius: 50%;
+		border: .2rem solid white;
+		transform: translateX(35%);
+		animation: appearRight 3s ease-in-out;
+}
+.circleTop{
+		position: absolute;
+		z-index: 4;
+		height: 26rem;
+		width: 26rem;
+		border-radius: 50%;
+		border: .2rem solid white;
+		transform: translate( -30%,-35% );
+		animation: appearTop 3s ease-in-out;
+}
+.circleBottom{
+		position: absolute;
+		z-index: 5;
+		height: 26rem;
+		width: 26rem;
+		border-radius: 50%;
+		border: .2rem solid white;
+		transform: translate( -30%,35% );
+		animation: appearBottom 3s ease-in-out;
+}
+
+
+@keyframes appearRight{
+		0% {opacity: 0; transform: translateX(60%)}
+		50% {opacity: 0; transform: translateX(60%)}
+		100% {opacity: 1; transform: translateX(35%)}
+}
+
+@keyframes appearBottom{
+		0% {opacity: 0; transform: translate(-65%,65%)}
+		50% {opacity: 0; transform: translate(-65%,65%)}
+		100% {opacity: 1; transform: translate(-30%,35%)}
+}
+
+@keyframes appearTop{
+		0% {opacity: 0; transform: translate( -65%,-65%)}
+		50% {opacity: 0; transform: translate( -65%,-65%)}
+		100% {opacity: 1; transform: translate( -30%,-35%)}
+}
+
+// RightSide Content
+
+.circleTopContent{
+		height: 100%;
+		width: 100%;
+		
+		.frontEnd{
+				position: absolute;
+				top: 30%;
+				left: 30%;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 2rem;
+		}
+		.skills{
+				position: absolute;
+				color: #CCC;
+				font-size: 1rem;
+		}
+		.html{
+				top: 23%;
+				left: 20%;
+		}
+		.css{
+				top: 25%;
+				right: 25%;
+		}
+		.js{
+				bottom: 21%;
+				left: 38%;
+		}
+		.nextjs{
+				bottom: 12.5%;
+				left: 41%;
+		}
+		.react{
+				bottom: 30%;
+				left: 17%;
+		}
+		.sass{
+				top: 11%;
+				right: 38%;
+		}
+		.redux{
+				bottom: 38%;
+				left: 42%;
+		}
+		.webgl{
+				top: 46%;
+				left: 10%;
+		}
+}
+
+.circleBottomContent{
+		height: 100%;
+		width: 100%;
+		
+		.backEnd{
+				position: absolute;
+				bottom: 32%;
+				left: 30%;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 2rem;
+		}
+		.skills{
+				position: absolute;
+				color: #CCC;
+				font-size: 1rem;
+		}
+		.node{
+				bottom: 25%;
+				left: 18%;
+		}
+		.express{
+				bottom: 26%;
+				right: 18%;
+		}
+		.ts{
+				top: 20%;
+				left: 38%;
+		}
+		.nextjs{
+				top: 11.8%;
+				left: 41%;
+		}
+		.mongodb{
+				top: 48%;
+				left: 28%;
+		}
+		.socketio{
+				top: 30%;
+				left: 15%;
+		}
+		.cors{
+				top: 38%;
+				right: 38%;
+		}
+		.jwt{
+				bottom: 12%;
+				right: 25%;
+		}
+}
+
+.circleRightContent{
+		height: 100%;
+		width: 100%;
+		
+		.control{
+				position: absolute;
+				top: 46%;
+				left: 40%;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 2rem;
+		}
+		.mern{
+				position: absolute;
+				top: 46.5%;
+				left: 0%;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 1.5rem;
+				animation: mernAppear 5s;
+		}
+		.skills{
+				position: absolute;
+				color: #CCC;
+				font-size: 1rem;
+		}
+		.githubtop{
+				position: absolute;
+				top: 25%;
+				left: 13%;
+		}
+		.githubbottom{
+				bottom: 25%;
+				left: 13%;
+		}
+		.firebase{
+				top: 32%;
+				right: 20%;
+		}
+		.heroku{
+				bottom: 30%;
+				right: 25%;
+		}
+		.jest{
+				top: 17%;
+				left: 45%;
+		}
+		.mongoatlas{
+				bottom: 13%;
+				left: 40%;
+		}
+}
+
+@keyframes mernAppear {
+		0%{opacity: 0%}
+		66%{opacity: 0%}
+		100%{opacity: 100%}
+}
+
+
+// RightSide Content
+
+
+@media only screen and (min-width : 120em) {
+		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
+				font-size: 1.75vh;
+		}
+		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
+				font-size: 3.5vh;
+		}
+		.circleRight .mern{
+				font-size: 2.7vh;
+		}
+		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+				height: 45.5vh;
+				width: 45.5vh;
+				border: .3vh solid white;
+		}
+}
+
+
+@media only screen and (max-width : 46em) {
+		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
+				font-size: .8rem;
+		}
+		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
+				font-size: 1.4rem;
+		}
+		.circleRight .mern{
+				font-size: 1rem;
+		}
+		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+				height: 18rem;
+				width: 18rem;
+				border: .1rem solid white;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
+				font-size: 2.2vw;
+		}
+		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
+				font-size: 4.2vw;
+		}
+		.circleRight .mern{
+				font-size: 3.2vw;
+		}
+		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+				height: 55vw;
+				width: 55vw;
+				border: .05rem solid white;
+		}
+}
+

@@ -1,0 +1,71 @@
+@import './_default.scss';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/*-----     BALISELAYOUT     -----*/
+
+.baliseLayout {
+		position: absolute;
+		height: 100%;
+		width: 8%;
+		color: white;
+		opacity: 30%;
+		font-size: 1.2rem;
+		font-family: 'Caveat', cursive;
+}
+
+.topHtml {
+		position: absolute;
+		top: 1vh;
+		margin-left: 1vw;
+}
+
+.bottomHtml {
+		position: absolute;
+		bottom: 2vh;
+		margin-left: 1vw;
+}
+
+.topBody {
+		position: absolute;
+		top: 4vh;
+		margin-left: 2vw;
+}
+
+.bottomBody {
+		position: absolute;
+		bottom: 5vh;
+		margin-left: 2vw;
+}
+
+
+/*-----     BALISE     -----*/
+
+.balise {
+		color: white;
+		opacity: 30%;
+		font-size: 1.2rem;
+		font-family: 'Caveat', cursive;
+}
+
+
+/*-----     MEDIA QUERIES     -----*/
+
+
+@media only screen and (min-width : 120em) {
+		.balise,.baliseLayout {
+				font-size: 2.1vh;
+		}
+}
+
+@media only screen and (max-width : 46em) {
+		.balise,.baliseLayout {
+				font-size: 1.2rem;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.balise,.baliseLayout {
+				font-size: 4vw;
+		}
+}
+

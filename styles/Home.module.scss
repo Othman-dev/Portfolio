@@ -1,0 +1,52 @@
+@import './_default.scss';
+
+.homeH1 {
+		position: relative;
+		font-size: 5.5rem;
+		color: #FFF;
+		min-width: 100%;
+		white-space: none;
+	
+}
+
+.nameColor {
+		display: inline;
+		color: $green-logo;
+}
+
+.homeP{
+		font-size: 2rem;
+		color: #888;
+
+}
+
+
+/*-----     MEDIA QUERIES     -----*/
+
+
+@media only screen and (min-width : 120em) {
+		.homeH1 {
+				font-size: 9.7vh;
+		}
+		.homeP {
+				font-size: 3.5vh;
+		}
+}
+
+@media only screen and (max-width : 46em) {
+		.homeH1 {
+				font-size: 3.5rem;
+		}
+		.homeP {
+				font-size: 1.3rem;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.homeH1 {
+				font-size: 11.5vw;			
+		}
+		.homeP {
+				font-size: 5vw;
+		}
+}

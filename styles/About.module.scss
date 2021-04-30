@@ -1,0 +1,136 @@
+@import './_default.scss';
+
+
+//-----     RIGHT SIDE     -----//
+.aboutContainer{
+		height: 80%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+
+		span{
+				position: relative;
+				bottom: 2rem;
+				color: $green-logo;
+				font-size: 1.3rem;
+				margin-left: 2rem;
+				margin-right: 2rem;
+		}
+		.aboutLinksOdd{
+				position: relative;
+				height: 6rem;
+				width: 17rem;
+				left: 15%;
+				border-radius: 20% 0% 0% 20% / 30%;
+				background-image: linear-gradient(to right, #FFF, #FFFFFF90, #00000000);
+				animation: leftToRight 3s ease-in-out;
+				cursor: pointer;
+				display: flex;
+				flex-direction: row;
+				justify-content: left;
+				align-items: center;
+		}
+		.aboutLinksEven{
+				position: relative;
+				height: 6rem;
+				width: 17rem;
+				left: 55%;
+				border-radius: 0% 20% 20% 0% / 30%;
+				background-image: linear-gradient(to left, #FFF, #FFFFFF90, #00000000);
+				animation: rightToLeft 3s ease-in-out;
+				cursor: pointer;
+				display: flex;
+				flex-direction: row;
+				justify-content: right;
+				align-items: center;
+		}
+		p{
+				color: black;
+				font-size: 1rem;
+				white-space: pre-wrap;
+		}
+		.AboutIconLink{
+				height: 3rem;
+				width: 3rem;
+				margin: .3rem;
+		}
+		.AboutIconLinkCodingame{
+				height: 5rem;
+				width: 5rem;
+				margin: .2rem;
+		}
+}
+
+@keyframes leftToRight {
+		0%{ opacity:0; transform: translateX(-50px); };
+		50%{ opacity:0; transform: translateX(-50px); };
+		100%{ opacity:1; transform: translateX(0); };
+}
+
+@keyframes rightToLeft {
+		0%{ opacity:0; transform: translateX(50px); };
+		50%{ opacity:0; transform: translateX(50px); };
+		100%{ opacity:1; transform: translateX(0); };
+}
+
+
+/*-----     MEDIA QUERIES     -----*/
+
+
+@media only screen and (min-width : 120em) {
+		.aboutContainer {
+				.aboutLinksOdd, .aboutLinksEven{
+						height: 10.5vh;
+						width: 14.2vw;
+				}
+				.AboutIconLink {
+						height: 5.2vh;
+						width: 5.2vh;
+						margin: .5vh;
+				}
+				.AboutIconLinkCodingame {
+						height: 8.5vh;
+						width: 8.5vh;
+						margin: .8vh;
+				}
+				span{
+						font-size: 2.3vh;
+						bottom: 3vh;
+				}
+				p{
+						font-size: 1.75vh;
+				}
+		}
+}
+
+@media only screen and (max-width : 46em) {
+		.aboutContainer span {
+				font-size: 1.1rem;
+		}
+		.aboutContainer .aboutLinksOdd *, .aboutContainer .aboutLinksEven *{
+				font-size: .8rem;
+		}
+		.aboutContainer .aboutLinksOdd, .aboutContainer .aboutLinksEven{
+				height: 4.5rem;
+				width: 14rem;
+		}
+		.aboutContainer  .AboutIconLink{
+				height: 2rem;
+				width: 2rem;
+		}
+		.aboutContainer .AboutIconLinkCodingame{
+				height: 3.5rem;
+				width: 3.5rem;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.aboutContainer .aboutLinksOdd, {
+				left: 10%;
+		}
+		.aboutContainer .aboutLinksEven {
+				left: 15%;
+		}
+}

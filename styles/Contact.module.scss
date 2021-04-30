@@ -1,0 +1,158 @@
+@import './_default.scss';
+
+
+//-----     LEFT SIDE     -----//
+
+
+.formInput {
+		background-color: $primary-text;
+		color: white;
+		border-radius: 4% / 30%;
+		border: solid 1px #FFFFFF30;
+		font-size: 1.2rem;
+		height: 2.5rem;
+		max-width: 25rem;
+		width: 45%;
+		outline: none;
+}
+		
+.formSubject{
+		max-width: 50.2rem;
+		width: 90.5%;	
+		border-radius: 2% / 30%;
+}
+
+.formMessage{
+		background-color: $primary-text;
+		color: white;
+		height: 15rem;
+		max-width: 50rem;
+		width: 90%;
+		border-radius: 2% / 4%;
+		border: solid 1px #FFFFFF30;
+		font-size: 1.2rem;
+		outline: none;
+
+}
+
+.buttonDiv{
+		display: flex;
+		flex-direction: row;
+}
+
+.formButton {
+		position: relative;
+		background-color: $primary-text;
+		color: $green-logo;
+		height: 3rem;
+		width: 20%;
+		border-radius: 8% / 15%;
+		border: solid 1px #FFFFFF30;
+		font-size: 1.7rem;
+}
+
+.messageSent {
+		margin-top: 1vh;
+		color: $green-logo;
+		display: none;
+}
+
+.messageFlex {
+		display: flex;
+}
+
+//-----     RIGHT SIDE     -----//
+
+
+.infoMap {
+		position: absolute;
+		text-align: left;
+		top: 8vh;
+		left: 2vw;
+		z-index:3;
+
+		span {
+				color: $green-logo;
+		}
+}
+
+.contactMapContainer {
+		position: absolute;
+		height: 100vh;
+		width: 45%;
+		right: 0;
+}
+
+
+//-----     MEDIA QUERY     -----//
+
+
+@media only screen and (min-width : 120em) {
+		.formInput {
+				font-size: 2.2vh;
+				height: 4.5vh;
+				max-width: 18vw;
+		}
+		
+		.formSubject{
+				max-width: 36vw;
+		}
+		.formMessage{
+				height: 25vh;
+				max-width: 36vw;
+				font-size: 2.2vh;
+		}
+
+		.formButton {
+				height: 6vh;
+				width: 20%;
+				font-size: 3vh;
+		}
+}
+
+@media only screen and (max-width : 107.5em) {
+		.contactMapContainer{
+				width: 100%;
+				left:10%;
+		}
+}
+
+@media only screen and (max-width : 46em) {
+		.formInput {
+				font-size: 1rem;
+				height: 2rem;
+		}
+		.formMessage{
+				height: 15rem;
+				font-size: 1rem;
+		}
+		.formButton {
+				height: 2rem;
+				font-size: 1.2rem;
+		}
+		.contactMapContainer{
+				width: 100%;
+				left: 0;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.formInput {
+				font-size: .8rem;
+				height: 1.8rem;
+				width: 42vw;
+		}
+		.formSubject{
+				width: 85vw;
+		}
+		.formMessage{
+				height: 12rem;
+				width: 85vw;
+				font-size: .8rem;
+		}
+		.formButton {
+				height: 2rem;
+				font-size: 1rem;
+		}
+}
+

@@ -1,0 +1,99 @@
+@import './_default.scss';
+
+.matrixContainer {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: $primary;
+		cursor: none;
+		overflow: hidden;
+}
+
+.holeContainer {
+		position: absolute;
+		height: 23vh;
+		width: 23vh;
+		border-radius: 50%;
+		overflow: hidden;
+		box-shadow: 0px 0px .2vh 1vh $primary;
+		animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate{
+		0%{transform: translate( -50%,-50% ) rotate(0deg)}
+		100%{transform: translate( -50%,-50% ) rotate(-360deg)}
+}
+
+.holeEffect {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		box-shadow:inset 0px 0px .4vh .6vh $primary;
+}
+
+.holeCircle {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		box-shadow:inset 0px 0px .4vh .6vh $primary;
+}
+
+.circle1 {
+		top: -49%;
+}
+
+.circle2 {
+		top: 49%;
+}
+
+.circle3 {
+		left: 86%;
+}
+
+.circle4 {
+		left: -86%;
+}
+
+.circle5 {
+		top: 74.5%;
+		left: 42.5%;
+}
+
+.circle6 {
+		top: -74.5%;
+		left: 42.5%;
+}
+
+.circle7 {
+		top: -74.5%;
+		left: -42.5%;
+}
+
+.circle8 {
+		top: 74.5%;
+		left: -42.5%;
+}
+
+.circle9 {
+		top: 24%;
+		left: 42.5%;
+}
+
+.circle10 {
+		top: -24%;
+		left: 42.5%;
+}
+
+.circle11 {
+		top: 24%;
+		left: -42.5%;
+}
+
+.circle12 {
+		top: -24%;
+		left: -42.5%;
+}
+
+

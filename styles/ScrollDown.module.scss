@@ -1,0 +1,41 @@
+@import './_default.scss';
+
+.scrollDownContainer {
+		position: absolute;
+		height: auto;
+		width: auto;
+		top: 95vh;
+		left: 33vw;
+		display: none;
+		transform: translate(-50%,-50%);
+		flex-direction: column;
+		align-items: center;
+		color: #888;
+		opacity: 0%;
+		animation: scrollDownOpacity 2s infinite
+} 
+
+.scrollDownText {
+		margin-bottom: .5rem;
+}
+
+.scrollDownArrow {
+		transform: rotate(90deg);
+}
+
+@keyframes scrollDownOpacity {
+		0% {opacity: 0%}
+		50% {opacity: 100%}
+		100% {opacity: 0%}
+}
+
+@media only screen and (max-width : 107.5em) {
+		.scrollDownContainer {
+				display: flex;
+		}
+}
+@media only screen and (max-width : 65em) {
+		.scrollDownContainer{
+				left: 50vw;
+		}
+}

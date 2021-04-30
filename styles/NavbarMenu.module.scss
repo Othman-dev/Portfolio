@@ -1,0 +1,18 @@
+@import './_default.scss';
+
+.navbarMenuDiv{
+		height: 15%;
+		width: 100%;
+		border-radius: 10%/50%;
+		background-color: #999;
+		transition: all .5s;
+}
+.navbarMenuTop{
+		transform: rotate(45deg) translate(27%,50%);
+}
+.navbarMenuMiddle{
+		display: none;
+}
+.navbarMenuBottom{
+		transform: rotate(-45deg) translate(27%,-50%);
+}

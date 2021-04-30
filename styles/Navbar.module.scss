@@ -1,0 +1,275 @@
+@import './_default.scss';
+
+.navbar {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		font-weight: bold;
+		overflow: hidden;
+}
+
+.imageBg {
+		object-fit: cover;
+}
+
+/*-----     LOGO     -----*/
+
+.logoContainer {
+		position: absolute;
+		top: 2%;
+		height: 20vh;
+		width: 20vh;
+		border-radius: 50%;
+		box-shadow: 0px 0px .4vh .3vh $primary;
+		overflow: visible;
+}
+
+.logo {
+		border-radius: 50%;
+		background-color: $primary;
+}
+
+/*-----     MENU     -----*/
+
+.menu {
+		display: flex;
+		position: absolute;
+		top: 50%; 
+		transform: translate( 0,-50%);
+		flex-direction: column;
+
+
+		.contact {
+				position: absolute;
+				top: 2vh;
+				right: 14vh;
+				text-decoration: none;
+				color: black;
+				text-shadow: 0px 0px .05vh black;
+		}
+
+		.home {
+				position: absolute;
+				top: -2vh;
+				left: 5vh;
+				text-decoration: none;
+				color: black;
+				text-shadow: 0px 0px .05vh black;
+		}
+
+		.about {
+				position: absolute;
+				top: 2vh;
+				left: 14vh;
+				width: 60%;
+				text-decoration: none;
+				color: black;
+				text-shadow: 0px 0px .05vh black;
+		}
+
+		.skills {
+				position: absolute;
+				bottom: 2vh;
+				left: 14vh;
+				text-decoration: none;
+				color: black;
+				text-shadow: 0px 0px .05vh black;
+		}
+
+		.projects {
+				position: absolute;
+				bottom: 2vh;
+				right: 14vh;
+				text-decoration: none;
+				color: black;
+				text-shadow: 0px 0px .05vh black;
+		}
+		
+		.activeLink {
+				color: $active-light;
+		}
+		
+		.knob{
+				height: 13vh;
+				width: 13vh;
+				border-radius: 50%;
+				background-color: $light-gray;
+				box-shadow: 0px 0px .5vh .3vh;
+				margin: 10px;
+				transition: all 1s;
+
+				.knobEffect {
+						position: absolute;
+						box-shadow:inset 0px 0px .5vh .2vh #EEE;
+						height: 13vh;
+						width: 13vh;
+						border-radius: 50%;
+
+				}
+
+				.knobMarker {
+						background-color: $primary;
+						height: 4vh;
+						width: 1vh;
+						border-radius: 40% 40% 10% 10%;
+						transform: translate( 6vh, 0vh );
+				}		
+		}
+		.knobAbout {
+				transform: rotate(60deg);
+		}
+		.knobSkills {
+				transform: rotate(120deg);
+		}
+		.knobProjects {
+				transform: rotate(-120deg);
+		}
+		.knobContact {
+				transform: rotate(-60deg);
+		}
+
+}
+
+
+/*-----     MUSIC     -----*/
+
+
+.musicContainer{
+		position: absolute;
+		z-index: 5;
+		border-radius: 10%/10%;
+		width: 13em;
+		bottom: 20vh;
+		height: 1.3em;
+		background: #111;
+		box-shadow: 0px 0px .4vh .2vh black;
+		overflow: hidden;
+	
+		.musicTextContainer{
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				opacity: 0;
+				cursor: pointer;
+				transition: all 1s;
+				animation: musicScreen 8s infinite;
+				animation-timing-function: linear;
+		}
+		.musicTextContainerOn{
+				opacity: 1;
+		}
+
+		p{
+				color: $green-logo;
+				font-size: 1rem;
+				white-space: pre;
+				margin-left: 1.2rem;
+				margin-right: 1rem;
+		}
+
+		.musicPlayer{
+				display: none;
+		}
+}
+
+@keyframes musicScreen {
+		from {transform: translate(0%)};
+		to {transform: translate(-105%)};
+}
+/*-----     SWITCHES     -----*/
+
+.switches {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		bottom: -7vh;
+		
+		.lightOff {
+				background-color: black;
+				height: 1vh;
+				width: 1vh;
+				border-radius: 50%;
+				box-shadow: 0px 0px .5vh .2vh;
+				transform: translate(660%,-200%);
+		}
+		.lightOn {
+				background-color: $active-light;
+				
+		}
+
+		.sliderContainer {
+				transform: translateY(-50%);
+		}
+
+		button {
+				background-color: $light-gray;
+				border-radius: 25%;
+				box-shadow: 0px 0px .4vh .3vh black;
+				height: 5vh;
+				width: 6vh;
+				margin: 3vh;
+				margin-top: 2vh;
+				padding: 1vh;
+
+				.faMusic {
+						height: 2.3vh;
+						width: 2.3vh;
+						color: $primary;
+				}
+
+				.flag {
+						position: relative;
+						height: 2.3vh;
+						width: 2.3vh;
+						display: flex;
+						left: 20%;
+						flex-direction: row;
+						align-self: center;
+						.flagBlue{
+								background-color: blue;
+								height: 100%;
+								width: .8vh;
+								border-radius: 20% 0% 0% 20%;
+						}
+						.flagWhite{
+								background-color: white;
+								height: 100%;
+								width: .7vh;
+						}
+						.flagRed{
+								background-color: red;
+								height: 100%;
+								width: .8vh;
+								border-radius: 0% 20% 20% 0%;
+						}
+				}
+		}
+}
+
+
+/*-----     MEDIA QUERIES     -----*/
+
+
+@media only screen and (min-width : 120em) {
+		.menu{
+				font-size: 1.75vh;
+		}	
+		.musicContainer{
+				height: 2.5vh;
+				width: 11vw;
+				
+				p{
+						font-size: 1.8vh;
+						margin-left: 1.85vh;
+						margin-right: 1.85vh;
+				}
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.navbar {
+				width: 100vw;
+		}
+}
