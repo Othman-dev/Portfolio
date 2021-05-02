@@ -3,7 +3,7 @@ const sendGrid = require('@sendgrid/mail');
 sendGrid.setApiKey(process.env.EMAIL_API_KEY);
 const emailOthman = process.env.EMAIL_OTHMAN;
 
-export default async (req, res) => {
+export default (req, res) => {
 		if(req.method === 'POST') {
 				const msg= {
 						to:emailOthman,
@@ -12,7 +12,7 @@ export default async (req, res) => {
 						text: req.body.name + '\n' + req.body.email + '\n\n' + req.body.content
 				};
 
-				await sendGrid.send(msg)
+				sendGrid.send(msg)
 				.then(result => {
 						console.log('result here')
 						res.status(200).json({

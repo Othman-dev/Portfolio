@@ -230,7 +230,7 @@
 		.circleRight .mern{
 				font-size: 2.7vh;
 		}
-		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+		.circleRight, .circleTop, .circleBottom {
 				height: 45.5vh;
 				width: 45.5vh;
 				border: .3vh solid white;
@@ -248,26 +248,26 @@
 		.circleRight .mern{
 				font-size: 1rem;
 		}
-		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
-				height: 18rem;
-				width: 18rem;
+		.circleRight, .circleTop, .circleBottom {
+				height: 40vh;
+				width: 40vh;
 				border: .1rem solid white;
 		}
 }
 
 @media only screen and (max-width : 32em) {
 		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
-				font-size: 2.2vw;
+				font-size: 1.1vh;
 		}
 		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
-				font-size: 4.2vw;
+				font-size: 1.8vh;
 		}
 		.circleRight .mern{
-				font-size: 3.2vw;
+				font-size: 1.5vh;
 		}
-		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
-				height: 55vw;
-				width: 55vw;
+		.circleRight, .circleTop, .circleBottom {
+				height: 25vh;
+				width: 25vh;
 				border: .05rem solid white;
 		}
 }
