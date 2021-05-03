@@ -33,7 +33,6 @@ export const circleBottomContent = (
 						<span className={[skillsStyles.socketio, skillsStyles.skills].join(' ')}>Socket.io</span>
 						<span className={[skillsStyles.cors, skillsStyles.skills].join(' ')}>Cors</span>
 						<span className={[skillsStyles.jwt, skillsStyles.skills].join(' ')}>JsonWebToken</span>
-						<span className={[skillsStyles.nextjs, skillsStyles.skills].join(' ')}>Next.js</span>
 						<span className={[skillsStyles.ts, skillsStyles.skills].join(' ')}>TypeScript</span>
 				</div>
 		)
