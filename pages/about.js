@@ -33,7 +33,6 @@ const About = () => {
 				window.open('https://www.codingame.com/profile/d462ed371e6392c976083f23d1ad103d8533304', '_blank');
 		};
 
-		
 return (
 		<div className={layoutStyles.mainDuo}>
 				<Loading title='About'/>
