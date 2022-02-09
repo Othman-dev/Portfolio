@@ -1,4 +1,4 @@
-export const dataEn = {
+export const dataEn= {
 		title: "Me, myself and I",
 		content: "   I am a Fullstack developer located in Wales, UK. My goal is to create interactive, easy to use and efficient user experience.\n\n   Independent inquisitive mind and problem solver. I enjoy learning and testing myself to sharpen my skills, and produce more elaborate and efficient programs.\n\n   Able to fill the Front-End and/or Back-end roles. Always ready to work with enthusiastic people on ambitious projects.",
 		linkTitle: "Use this link for more details about what I do",
