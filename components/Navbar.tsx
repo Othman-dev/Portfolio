@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react'
+import { NextPage } from 'next'
 import navbarStyles from '../styles/Navbar.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,7 +9,7 @@ import Slider from 'react-input-slider'
 import { FaMusic } from 'react-icons/fa'
 
 
-const Navbar = () => {
+const Navbar: NextPage = () => {
 
 		const { main, dispatch } = useContext(MainContext);
 

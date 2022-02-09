@@ -1,9 +1,10 @@
 import { useContext, useState } from 'react'
+import { NextPage } from 'next'
 import { MainContext } from '../context/MainContext'
 import NavbarMenuStyles from '../styles/NavbarMenu.module.scss'
 
 
-const NavbarMenu = () => {
+const NavbarMenu : NextPage = () => {
 
 		const { main, dispatch } = useContext(MainContext);
 

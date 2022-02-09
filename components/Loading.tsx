@@ -1,15 +1,18 @@
 import { useContext, useState, useEffect } from 'react'
+import { NextPage } from 'next'
 import loadingStyles from '../styles/Loading.module.scss'
 import Image from 'next/image'
-import { MainContext } from '../context/MainContext.js'
+import { MainContext } from '../context/MainContext'
 
-const Loading = (props) => {
+
+const Loading: NextPage<{header: string}> = (props) => {
 
 		const { main } = useContext(MainContext);
 		
-		const { title } = props;
+		const { header }  = props;
 
 		const [done, setDone] = useState(true);
+		console.log(props)
 
 		useEffect(() => {
 				setDone(false);
@@ -32,7 +35,7 @@ return(
 								<Image src='/sound.png' alt='sound' className={loadingStyles.soundImage} layout='fill' />
 								<div className={loadingStyles.soundAnim}/>
 						</div>
-						<div className={loadingStyles.loadingText}>{!main.french ? `receiving ${title} signal` : `réception du signal de ${title}`}</div>
+						<div className={loadingStyles.loadingText}>{!main.french ? `receiving ${header} signal` : `réception du signal de ${header}`}</div>
 				</div> 
 		}
 		</div>

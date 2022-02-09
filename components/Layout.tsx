@@ -1,10 +1,11 @@
-import { useEffect, useState, useContext } from 'react'
+import { useContext } from 'react'
+import { NextPage } from 'next'
 import layoutStyles from '../styles/Layout.module.scss'
 import Navbar from './Navbar'
 import NavbarMenu from './NavbarMenu'
-import { MainContext } from '../context/MainContext.js'
+import { MainContext } from '../context/MainContext'
 
-const Layout = ({children}) => {
+const Layout: NextPage = ({children}) => {
 
 		const { main, dispatch } = useContext(MainContext);
 

@@ -1,11 +1,12 @@
 import { useContext, useEffect } from 'react';
+import { NextPage } from 'next';
 import homeStyles from '../styles/Home.module.scss';
 import layoutStyles from '../styles/Layout.module.scss';
 import Loading from '../components/Loading';
 import { MainContext } from '../context/MainContext';
 import BaliseLayout, { BaliseOn, BaliseOff } from '../components/Balise';
 
-const Home = () => {
+const Home: NextPage = () => {
 		
 		const { dispatch, main } = useContext(MainContext);
 		
@@ -17,7 +18,7 @@ const Home = () => {
 
 return (
 		<div className={homeStyles.mainDuo}>
-				<Loading title='Home'/>
+				<Loading header='Home'/>
 				<BaliseLayout/>
 				<div className={layoutStyles.leftSide}>
 						<div className={layoutStyles.leftBlock}>

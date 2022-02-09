@@ -1,22 +1,23 @@
+import { NextPage } from 'next';
 import baliseStyles from '../styles/Balise.module.scss'
 
-export const BaliseOn = (props) => {
-		const { content } = props;
+export const BaliseOn: Function = (props: any) => {
+		const { content }: any = props;
 return(
 		<div className={baliseStyles.balise}>
 				{`<${content}>`}
 		</div>
 )};
 
-export const BaliseOff = (props) => {
-		const { content } = props;
+export const BaliseOff: Function = (props) => {
+		const { content }: any = props;
 return(
 		<div className={baliseStyles.balise}>
 				{`</${content}>`}
 		</div>
 )};
 
-const BaliseLayout = () => {
+const BaliseLayout: NextPage = () => {
 
 return(
 		<div className={baliseStyles.baliseLayout}>

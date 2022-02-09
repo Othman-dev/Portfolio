@@ -35,7 +35,7 @@ const About = () => {
 
 return (
 		<div className={layoutStyles.mainDuo}>
-				<Loading title='About'/>
+				<Loading header='About'/>
 				<BaliseLayout/>
 				<ScrollDown/>
 				<div className={layoutStyles.leftSide}>

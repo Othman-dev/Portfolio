@@ -1,10 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
+import { NextPage } from 'next'
 import matrixStyles from '../styles/Matrix.module.scss';
+import { Pointer } from '../types'
 
 
-const Matrix = () => {
+const Matrix: NextPage = () => {
 
-		const [pointer, setPointer] = useState({
+		const [pointer, setPointer]  = useState<Pointer>({
 				x:0,
 				y:0
 		})
@@ -40,7 +42,7 @@ const Matrix = () => {
 
 				window.addEventListener('mousemove', mousePointer)
 				function mousePointer(e) {
-						pointer.style = setPointer({
+						setPointer({
 								x: e.clientX,
 								y: e.clientY
 						})

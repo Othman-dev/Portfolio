@@ -2,26 +2,25 @@ import {GoogleMap, Marker, useLoadScript } from '@react-google-maps/api'
 import mapStyle from './ContactMapStyle'
 
 
-		const libraries = ['places'];
-		const mapContainerStyle = {
+		const libraries: any[] = ['places'];
+		const mapContainerStyle: {} = {
 				height: '100%',
 				width:'100%'
 		};
-		const center = {
+		const center: {lat: number, lng: number} = {
 				lat:51.686130,
 				lng:1.906690
 		};
-		const options = {
+		const options: {styles: any, disableDefaultUI: boolean} = {
 				styles : mapStyle,
 				disableDefaultUI: true,
 		}
-		const markerPos = {
+		const markerPos: {lat: number, lng: number} = {
 				lat:51.686130,
 				lng:-3.906690
 		}
 
-
-const ContactMap = () => {
+const ContactMap: Function = () => {
 
 		const {isLoaded, loadError} = useLoadScript({
 				googleMapsApiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,

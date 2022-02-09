@@ -1,4 +1,4 @@
-const mapStyle = [
+const mapStyle: any[] = [
     {
         "featureType": "all",
         "elementType": "labels.text.fill",

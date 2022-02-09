@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from 'react'
+import { NextPage } from 'next';
 import contactStyles from '../styles/Contact.module.scss'
 import layoutStyles from '../styles/Layout.module.scss'
 import { dataEn, dataFr } from '../data/contactData'
@@ -10,7 +11,7 @@ import Axios from 'axios'
 import ScrollDown from '../components/ScrollDown'
 
 
-const Contact = () => {
+const Contact: NextPage = () => {
 
 		const { main, dispatch } = useContext(MainContext);
 
@@ -25,7 +26,7 @@ const Contact = () => {
 				console.log(message)
 				Axios.post('/api/sendEmails', message)
 				.then((result) => {
-						console.log(result.text);
+						console.log(result);
 						setMessage({...message, messageSent: true})
 				}, (error) => {
 						console.log(error.text);
@@ -40,7 +41,7 @@ const Contact = () => {
 
 return (
 		<div className={layoutStyles.mainDuo}>
-				<Loading title='Contact'/>
+				<Loading header='Contact'/>
 				<div className={layoutStyles.leftSide}>
 						<Balise/>
 						<ScrollDown/>
@@ -62,7 +63,7 @@ return (
 										<br/>
 										<input className={[contactStyles.formInput, contactStyles.formSubject].join(' ')} name='subject' placeholder='Subject' type='text' onChange={handleChange} required/>
 										<br/>
-										<textarea className={contactStyles.formMessage} name='content' placeholder='Message...' type='text' onChange={handleChange} required/>
+										<textarea className={contactStyles.formMessage} name='content' placeholder='Message...' data-type='text' onChange={handleChange} required/>
 										<br/>
 										<div className='buttonDiv'>
 												<input className={contactStyles.formButton} type='submit' value={!main.french ? 'send' : 'envoyer'}/>

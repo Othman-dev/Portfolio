@@ -1,9 +1,10 @@
 import { useContext, useState } from 'react'
+import { NextPage } from 'next'
 import scrollDownStyles from '../styles/ScrollDown.module.scss'
 import { BsFillForwardFill } from 'react-icons/bs'
 
 
-const ScrollDown = () => {
+const ScrollDown: NextPage = () => {
 
 return(
 		<div className={scrollDownStyles.scrollDownContainer}>

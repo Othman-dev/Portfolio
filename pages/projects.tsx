@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react'
+import { NextPage } from 'next';
 import projectsStyles from '../styles/Projects.module.scss'
 import Loading from '../components/Loading'
 import BaliseLayout, { BaliseOn, BaliseOff } from '../components/Balise'
@@ -6,7 +7,7 @@ import { MainContext } from '../context/MainContext'
 import { FaGithub, FaLink } from 'react-icons/fa'
 import {data} from '../data/projectsData'
 
-const Projects = () => {
+const Projects: NextPage = () => {
 
 		const { dispatch } = useContext(MainContext);
 		
@@ -20,7 +21,7 @@ const Projects = () => {
 
 return (
 		<div>
-				<Loading title='Projects'/>
+				<Loading header='Projects'/>
 		<div className={projectsStyles.projectsContainer}>
 				<BaliseLayout/>
 				<div className={projectsStyles.projectsBaliseOn}><BaliseOn content='link'/></div> 

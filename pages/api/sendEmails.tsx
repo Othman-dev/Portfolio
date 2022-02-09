@@ -1,11 +1,21 @@
-const sendGrid = require('@sendgrid/mail');
+//const sendGrid = require('@sendgrid/mail');
+import sendGrid from '@sendgrid/mail'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 sendGrid.setApiKey(process.env.EMAIL_API_KEY);
-const emailOthman = process.env.EMAIL_OTHMAN;
+const emailOthman: string = process.env.EMAIL_OTHMAN;
 
-export default (req, res) => {
+export default (req: NextApiRequest, res: NextApiResponse) => {
 		if(req.method === 'POST') {
-				const msg= {
+
+				type Msg = {
+					to: string
+					from: string
+					subject: string
+					text: string
+				}
+
+				const msg: Msg= {
 						to:emailOthman,
 						from:emailOthman,
 						subject:req.body.subject,

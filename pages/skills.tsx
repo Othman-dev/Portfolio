@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react'
+import { NextPage } from 'next';
 import skillStyles from '../styles/Skills.module.scss'
 import layoutStyles from '../styles/Layout.module.scss'
 import { dataEn, dataFr, circleTopContent, circleRightContent, circleBottomContent } from '../data/skillsData.js'
@@ -8,7 +9,7 @@ import { MainContext } from '../context/MainContext';
 import ScrollDown from '../components/ScrollDown'
 
 
-const Skills = () => {
+const Skills: NextPage = () => {
 
 		const { main, dispatch } = useContext(MainContext);
 		
@@ -18,7 +19,7 @@ const Skills = () => {
 
 return (
 		<div className={layoutStyles.mainDuo}>
-				<Loading title='Skills'/>
+				<Loading header='Skills'/>
 				<BaliseLayout/>
 		<ScrollDown/>
 				<div className={layoutStyles.leftSide}>
