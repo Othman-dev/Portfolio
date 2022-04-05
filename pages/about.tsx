@@ -8,7 +8,6 @@ import { FaLinkedin, FaGithub, FaStackOverflow,  } from 'react-icons/fa'
 import { dataEn, dataFr } from '../data/aboutData'
 import ScrollDown from '../components/ScrollDown'
 
-
 const About = () => {
 
 		const { main, dispatch } = useContext(MainContext);
